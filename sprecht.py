@@ -1,3 +1,5 @@
+import itertools
+
 class Tabloid:
     def sort_row(self):
         cnt = 0
@@ -58,7 +60,23 @@ def Ct(shape, p):
     """
     Column stablizer
     """
-    pass
+    Ct = []
+    col = []
+    n = len(p)
+
+    cnt = 0
+    for i in shape:
+        row = p[cnt:cnt+i]
+        for j in range(len(row)):
+            if j >= len(col):
+               col.append([])
+            col[j].append(row[j])
+        cnt += i
+    
+    for i in range(len(col)):
+        Ct.append(itertools.permutations(col[i]))
+    return Ct
+
 
 if __name__ == "__main__":
     n = int(input())
@@ -83,3 +101,5 @@ if __name__ == "__main__":
     p = [2, 3, 1, 5, 4]
     print("Action on T1:")
     print(a.permut(p), "\n")
+
+    Ct([3, 2], [1,4,5,2,3])
