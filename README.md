@@ -1,2 +1,5 @@
 # Sprecht-Character
-Compute the character table of symmetric groups by Sprecht modules.
+Compute character tables of symmetric groups by Sprecht modules.
+
+## Reference
+  - [1] Steinberg, B. (2012). Representation theory of finite groups: an introductory approach. New York: Springer.
